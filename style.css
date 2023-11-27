@@ -1,0 +1,384 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333;
+    
+}
+
+
+main{
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+/* Header styles */
+
+header{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 10px;
+}
+.nav-header{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgba(252, 251, 251, 0.544);
+    align-items: center;
+    justify-self: end;
+    gap: 3rem;
+    font-size: 1.3em;
+}
+.nav-header p{
+    color: red;
+    text-shadow: 1px 1px 1px black;
+}
+
+.link::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.nav-header a{
+    color: #333;
+    text-decoration: none;
+    padding: .3rem .5rem;
+    text-align: right;
+    width: fit-content;
+}
+
+
+.logo{
+    justify-content: center;
+    justify-self: center;
+    padding: 0;
+    max-width: 11rem;
+    
+}
+
+
+/* main style layout */
+
+/* Intro area in index.html*/
+.grid-1-intro{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr ;
+
+}
+
+.grid-item-1{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    color: #333;
+}
+  
+.grid-item-1-text2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(255, 255, 255, 0.7);border-radius: 15px;
+    width: fit-content;
+    align-self: baseline;
+    padding: 1rem;
+    margin: 20rem 1rem 1rem 31rem;
+    font-size: 1.2em;
+}
+
+.grid-item-1-text {  
+    box-shadow: 1px 2px 66px -27px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(photos/bakery\ main.jpg);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 40rem;
+}
+
+/*
+.grid-item-1-text h1{
+    color: #4e4b4b;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:3rem;
+    
+    margin-top: 7rem;
+    margin-right: 30rem;
+    padding: 0;
+}
+
+.grid-item-1-text p{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #4e4b4b;
+    padding: 0;
+    font-size: 2rem;
+    margin-right: 30rem;
+}
+*/
+
+#bakery-photo{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Second area style in index.html*/
+.grid-item-2{
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    margin: 1.5em;
+    align-items: start;
+}
+
+.grid-item-2-1-photo{
+    text-align: center;
+}
+
+.grid-item-2-2-photo{
+    
+}
+
+#donuts{
+    height: 100%;
+}
+
+.grid-item-2-3-photo{
+    text-align: center;
+}
+
+.bakery-photo-2{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* grid 2 styles */
+.grid-2{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2em;
+    margin: 1.5em;
+    text-align: center;
+}
+
+
+
+/* commendments style */
+
+.commendments{
+    background-color: #535250;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+    align-items: center;
+    justify-items: center;
+    height: 20vh;
+}
+
+.commendments img{
+    max-width: 100px;
+}
+
+/* footer styles */
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+    color: #333;
+}
+
+.footer-list{
+    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(4rem, 1fr));
+    align-items: baseline;
+    text-align: center;
+}
+
+.socials > *, .more > *{
+    display: block;
+    margin-top: 15px;
+}
+
+.newsletter{
+    padding: 1rem;
+    max-width: 37.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    justify-self: center;
+}
+
+.footer-list h4{
+    text-decoration: underline;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+.grid-footer p {
+    text-align: center;
+}
+
+#copyright, #real-time{
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333
+}
+
+input[type="name"] {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 0.9rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    background-color: #3d423d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #6f716f;
+}
+
+#errorMessages{
+    color: red;
+    text-align: center;
+}
+
+.footer-list a{
+    color: #333;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .grid-item-1-text2 {
+        margin: 5rem 1rem 1rem 1rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .grid-item-1-text2 {
+        margin: 2rem 1rem 1rem 1rem;
+    }
+}
+/* Contact Styles for contact.html */
+
+.contact-footer{
+    padding-top: 10rem;
+}
+
+.contacts p{
+    text-align: center;
+}
+
+input[type="reset"] {
+    background-color: #3d423d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="reset"]:hover {
+    background-color: #6f716f;
+}
+
+main h1, main h2{
+    text-align: center;
+}
+
+.contact-form{
+    max-width: 20rem;
+    margin: 0 auto;
+    padding: .8rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.contact-form label{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="password"],
+.contact-form input[type="email"]{
+    width: 95%;
+    padding: 0.6rem;
+    margin: 0.3rem 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+

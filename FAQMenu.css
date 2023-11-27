@@ -1,0 +1,154 @@
+/* FAQ styles */
+main{
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    color: #bf360c;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #e0e0e0;
+}
+
+a {
+    color: #bf360c;
+    text-decoration: none;
+}
+
+#copyright, #real-time{
+    font-size: 1em;
+    text-align: center;
+}
+
+/* About */
+
+.about-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color:#BFE4EE;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.know-us{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.larry, .linda{
+    display: grid;
+    background-color: #BFE4EE;
+   border-radius: 15px;
+}
+
+.larry p , .linda p{
+    background-color: #fff;
+    border-radius: 15px;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+#larry-img{
+    place-self: center;
+}
+
+.know-us img{
+    border-radius: 15px;
+    margin: auto;
+    max-width: 20rem;
+}
+
+
+/* Menu */
+
+.menu-section img{
+    width: 13rem;
+    box-shadow: 1px 2px 66px -15px;
+}
+
+#velvet-cake{
+    align-self: baseline;
+}
+
+#news{
+    align-self: center;
+}
+
+.price {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.menu-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+    text-align: center;
+}
+
+.menu-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: .5rem;
+
+}
+
+.menu-item{
+    text-align: center;
+    align-self: baseline;
+}
+
+.menu:nth-last-of-type(even){
+    background-color: #BFE4EE;
+}
+.menu{
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menu-2:nth-last-of-type(odd){
+    background-color: #BFE4EE;
+}
+.menu-2{
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#seasonal {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 5rem;
+}
+
+#seasonal img{
+    place-self: center;
+}

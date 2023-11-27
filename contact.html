@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Heavenly Delights Bakery - Contact</title>
+        <link rel = "stylesheet" href = "style.css">
+        <link rel = "icon" type = "image/x-icon" href = "photos/othercakefavicon.ico">
+        <meta charset="utf-8">
+        <script src="https://kit.fontawesome.com/10b60c0234.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html"><img src="photos/reallogo.png" alt="logo" class = "logo"></a>
+            <nav class = "nav-header">
+                <a href="index.html" class = "link">Home</a>
+                <a href="about.html" class = "link">About</a>
+                <a href="faq.html" class = "link">FAQ</a>
+                <a href="menu.html" class = "link">Menu</a>
+                <a href="contact.html" class = "link">Contact Us</a>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Contact</h1>
+            <div class = "contacts">
+                <p>Kamloops, Bristish Columbia, Canada</p>
+                <p>999 Tranquille Rd.</p>
+                <p>Our email is: HeavenlyBakery@delights.com</p>
+                <p>Telephone number: 778 047 0999</p>
+
+                <h2>Hours of operation</h2>
+                <p>10am - 5pm everyday</p>
+            </div>
+
+            <div>
+                <form action="" class = "contact-form" id = "contact" onsubmit= "validateForm(event)">
+                    <label for="name">Name:</label>
+                    <input type="text">
+                    <label for="email">Email:</label>
+                    <input type="email">
+                    <label for="tel">Phone number:</label>
+                    <input type="tel" id = "phoneNumber">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message-to-send" cols="30" rows="10"></textarea>
+                    <input type="submit">
+                    <input type="reset">
+                </form>
+            </div>
+
+            <div id = "errorMessages"></div>
+
+            <footer class = "contact-footer">
+                <div class = "grid-footer">
+                    <nav class = footer-list>
+                        <div class = "newsletter">
+                            <form action = "post" class = "newsletter-form">
+                                <h4>Sign up for our Newsletter for 10% off your next order!</h4>
+                                <input type="name" placeholder="Your first name">
+                                <input type="email" placeholder="Your email address">
+                                <input type="checkbox" required>
+                                <label for="checkbox">Yes I agree to receive emails from Heavenly Delights Bakery!</label>
+                                <input type="submit" value="Sign me up">
+                            </form>
+                        </div>
+                        <div class = "more">
+                        <h4>More</h4>
+                        <a href="#">FAQ</a>
+                        <a href="#">Menu</a>
+                        <a href="mailto:heavenlydelights@delights.com">Our email</a>
+                        </div>
+                        <div class = "socials">
+                            <h4>Connect with us</h4>
+                            <a href="#">Instagram</a>
+                            <a href="#">Tik Tok</a>
+                            <a href="#">X</a>
+                            <a href="#">Facebook</a>
+                        </div>
+                    </nav>
+                </div>
+            </footer>
+            <p id = "real-time">Last updated: <span id = "update"></span></p>
+            <p id = "copyright">Copyright &copy;Heavenly Delights Bakery. All rights reserved</p>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
