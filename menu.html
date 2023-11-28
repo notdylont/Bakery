@@ -3,15 +3,15 @@
     <head>
         <title>Heavenly Delights Bakery - Menu</title>
         <link rel = "stylesheet" href = "style.css">
-        <link rel="stylesheet" href="FAQMenu.css">
+        <link rel="stylesheet" href="FAQMenuAbout.css">
         <link rel = "icon" type = "image/x-icon" href = "photos/othercakefavicon.ico">
         <meta charset="utf-8">
-        <script src="https://kit.fontawesome.com/10b60c0234.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
         <header>
-            <a href="index.html"><img src="photos/reallogo.png" alt="logo" class = "logo"></a>
+            <a href="index.html"><img src="photos/reallogo.png" alt="logo" id = "logo"></a>
             <nav class = "nav-header">
                 <a href="index.html" class = "link">Home</a>
                 <a href="about.html" class = "link">About</a>
@@ -116,34 +116,33 @@
                     </div>
             </section>
             <hr>
-            <footer>
-                <div class = "grid-footer">
-                    <nav class = footer-list>
-                        <div class = "newsletter">
-                            <form action = "" class = "newsletter-form" id = "news">
-                                <h4>Sign up for our Newsletter for 10% off your next order!</h4>
-                                <input type="name" placeholder="Your first name" required>
-                                <input type="email" placeholder="Your email address" required>
-                                <input type="checkbox" required>
-                                <label for="checkbox">Yes I agree to receive emails from Heavenly Delights Bakery!</label>
-                                <input type="submit" value="Sign me up">
-                            </form>
-                        </div>
-                        <div class = "more">
+            <footer id = "grid-footer">
+                <nav id = footer-list>
+                    <div class = "newsletter">
+                        <form action = "" class = "newsletter-form" id = "newsletter-form-id">
+                            <h4>Sign up for our Newsletter for 10% off your next order!</h4>
+                            <input type="name" placeholder="Your first name" required>
+                            <input type="email" placeholder="Your email address" required>
+                            <input type="checkbox" required>
+                            <label for="checkbox">Yes I agree to receive emails from Heavenly Delights Bakery!</label>
+                            <input type="submit" value="Sign me up">
+                        </form>
+                    </div>
+                    <div class = "more">
                         <h4>More</h4>
-                        <a href="#">FAQ</a>
-                        <a href="#">Menu</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="menu.html">Menu</a>
                         <a href="mailto:heavenlydelights@delights.com">Our email</a>
-                        </div>
-                        <div class = "socials">
-                            <h4>Connect with us</h4>
-                            <a href="#">Instagram</a>
-                            <a href="#">Tik Tok</a>
-                            <a href="#">X</a>
-                            <a href="#">Facebook</a>
-                        </div>
-                    </nav>
-                </div>
+                        <a href="crossreference.html">Cross Reference</a>
+                    </div>
+                    <div class = "socials">
+                        <h4>Connect with us</h4>
+                        <a href="https://www.instagram.com/">Instagram</a>
+                        <a href="https://www.tiktok.com/en/">Tik Tok</a>
+                        <a href="https://twitter.com/">X (Twitter)</a>
+                        <a href="https://www.facebook.com/">Facebook</a>
+                    </div>
+                </nav>
             </footer>
             <p id = "real-time">Last updated: <span id = "update"></span></p>
             <p id = "copyright">Copyright &copy;Heavenly Delights Bakery. All rights reserved</p>

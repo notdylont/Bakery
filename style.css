@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
+/* index.html and contact.html styles are in this css file */
 
 
 body{
@@ -8,9 +9,7 @@ body{
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #333;
-    
 }
-
 
 main{
     animation: fadeIn 2s;
@@ -30,11 +29,12 @@ main{
 header{
     display: grid;
     grid-template-columns: auto 1fr;
-    padding: 10px;
+    padding: 0.6rem;
 }
+
 .nav-header{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     padding: 1rem;
     background-color: rgba(252, 251, 251, 0.544);
@@ -42,10 +42,6 @@ header{
     justify-self: end;
     gap: 3rem;
     font-size: 1.3em;
-}
-.nav-header p{
-    color: red;
-    text-shadow: 1px 1px 1px black;
 }
 
 .link::after{
@@ -63,7 +59,6 @@ header{
 
 .link {
     position: relative;
-    text-decoration: none;
     color: #333;
     transition: color 0.3s ease-in-out;
 }
@@ -73,7 +68,6 @@ header{
     transform-origin: bottom left;
 }
 
-
 .nav-header a{
     color: #333;
     text-decoration: none;
@@ -82,15 +76,23 @@ header{
     width: fit-content;
 }
 
-
-.logo{
-    justify-content: center;
-    justify-self: center;
-    padding: 0;
+#logo{
     max-width: 11rem;
-    
 }
 
+
+/* media query to handle smaller screens on header */
+
+@media only screen and (max-width: 48rem) {
+    .nav-header {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+        font-size: 1em;
+    }
+
+    .nav-header a {
+        text-align: center;
+    }
+}
 
 /* main style layout */
 
@@ -99,7 +101,12 @@ header{
     display: grid;
     gap: 1.5rem;
     grid-template-columns: 1fr ;
+}
 
+/* Style countdown */
+.grid-intro p:last-child{
+    color: red;
+    text-shadow: 1px 1px 1px black;
 }
 
 .grid-item-1{
@@ -108,18 +115,9 @@ header{
     grid-template-columns: 1fr;
     color: #333;
 }
-  
-.grid-item-1-text2{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgba(255, 255, 255, 0.7);border-radius: 15px;
-    width: fit-content;
-    align-self: baseline;
-    padding: 1rem;
-    margin: 20rem 1rem 1rem 31rem;
-    font-size: 1.2em;
-}
 
-.grid-item-1-text {  
+.grid-intro-container {  
+    display: grid;
     box-shadow: 1px 2px 66px -27px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -130,31 +128,13 @@ header{
     padding: 0;
     min-height: 40rem;
 }
-
-/*
-.grid-item-1-text h1{
-    color: #4e4b4b;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size:3rem;
-    
-    margin-top: 7rem;
-    margin-right: 30rem;
-    padding: 0;
-}
-
-.grid-item-1-text p{
-    font-family: 'Josefin Sans', sans-serif;
-    color: #4e4b4b;
-    padding: 0;
-    font-size: 2rem;
-    margin-right: 30rem;
-}
-*/
-
-#bakery-photo{
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
+  
+.grid-intro{
+    place-self: center;
+    background-color: rgba(255, 255, 255, 0.7);border-radius: 15px;
+    max-width: fit-content;
+    padding: 1rem;
+    font-size: 1.2em;
 }
 
 
@@ -172,10 +152,6 @@ header{
     text-align: center;
 }
 
-.grid-item-2-2-photo{
-    
-}
-
 #donuts{
     height: 100%;
 }
@@ -190,7 +166,7 @@ header{
     object-fit: cover;
 }
 
-/* grid 2 styles */
+/* grid 2 styles which includes the video */
 .grid-2{
     display: grid;
     grid-template-columns: auto 1fr;
@@ -199,8 +175,9 @@ header{
     margin: 1.5em;
     text-align: center;
 }
-
-
+.grid-2 video{
+    width: 100%;
+}
 
 /* commendments style */
 
@@ -217,26 +194,35 @@ header{
     max-width: 100px;
 }
 
-/* footer styles */
+/* footer styles, 
+   applies to all pages
+*/
 
-footer{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
-    color: #333;
-}
-
-.footer-list{
-    gap: 1em;
+#footer-list{
+    gap: 1rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(4rem, 1fr));
     align-items: baseline;
     text-align: center;
 }
 
+#footer-list a{
+    color: #333;
+    text-decoration: none;
+}
+
+#footer-list h4{
+    text-decoration: underline;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
 .socials > *, .more > *{
     display: block;
     margin-top: 15px;
+    font-size: 0.9em;
 }
+
 
 .newsletter{
     padding: 1rem;
@@ -246,13 +232,7 @@ footer{
     justify-self: center;
 }
 
-.footer-list h4{
-    text-decoration: underline;
-    font-weight: normal;
-    font-size: 1.2em;
-}
-
-.grid-footer p {
+#grid-footer p {
     text-align: center;
 }
 
@@ -314,22 +294,7 @@ input[type="submit"]:hover {
     text-align: center;
 }
 
-.footer-list a{
-    color: #333;
-    text-decoration: none;
-}
 
-@media screen and (max-width: 768px) {
-    .grid-item-1-text2 {
-        margin: 5rem 1rem 1rem 1rem;
-    }
-}
-
-@media screen and (max-width: 720px) {
-    .grid-item-1-text2 {
-        margin: 2rem 1rem 1rem 1rem;
-    }
-}
 /* Contact Styles for contact.html */
 
 .contact-footer{
